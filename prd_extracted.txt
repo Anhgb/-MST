@@ -1,0 +1,665 @@
+PRD – Nền tảng kết nối thợ sửa chữa và dịch vụ tại nhà tích hợp AI
+
+promotoservice
+Định hướng hình ảnh: hiện đại, chuyên nghiệp, đáng tin cậy, kết hợp dịch vụ sửa xe và sửa chữa tại nhà.
+Thông tin tổng quan
+Tên dự án đề xuất
+FixNow AI
+Loại sản phẩm
+Website dịch vụ đa ngành
+Nền tảng
+Responsive Web App
+Ngôn ngữ
+Tiếng Việt
+Mục tiêu cốt lõi
+Giúp khách hàng tìm thợ sửa xe hoặc thợ sửa chữa tại nhà nhanh chóng, biết trước chi phí, theo dõi tiến độ và thanh toán minh bạch.
+1. Tổng quan sản phẩm
+1.1. Mô tả sản phẩm
+FixNow AI là nền tảng trung gian kết nối ba nhóm người dùng:
+Khách hàng: người cần sửa xe máy, ô tô hoặc thiết bị, đồ dùng trong gia đình.
+Thợ sửa chữa: cá nhân hoặc đơn vị cung cấp dịch vụ sửa chữa chuyên nghiệp.
+Quản trị viên: người quản lý tài khoản, thợ, dịch vụ, giá cả, giao dịch, khiếu nại và hệ thống AI.
+Khác với các website chỉ cung cấp danh sách thợ, hệ thống hướng tới quy trình khép kín:
+Khách hàng đăng nhập hoặc đăng ký tài khoản.
+Chọn dịch vụ sửa xe hoặc sửa chữa tại nhà.
+Mô tả triệu chứng, chụp ảnh hoặc gửi video.
+AI phân tích lỗi có khả năng xảy ra và dự toán chi phí.
+Khách hàng xem bảng giá chi tiết, xác nhận đồng ý.
+Hệ thống tìm và điều phối thợ phù hợp ở gần khách hàng.
+Thợ xác nhận nhận việc, di chuyển đến địa điểm sửa chữa.
+Khách hàng theo dõi tiến độ và thanh toán.
+Khách hàng đánh giá dịch vụ sau khi hoàn tất.
+1.2. Mục tiêu kinh doanh
+Rút ngắn thời gian tìm kiếm thợ sửa chữa.
+Hạn chế tình trạng báo giá không minh bạch.
+Xây dựng mạng lưới thợ được xác minh.
+Tăng độ tin cậy bằng báo giá trước và chính sách không phát sinh chi phí trái phép.
+Tạo doanh thu từ phí kết nối, hoa hồng dịch vụ và các gói dành cho thợ.
+Ứng dụng AI để hỗ trợ chẩn đoán sơ bộ và dự toán chi phí.
+1.3. Phạm vi phiên bản đầu tiên
+MVP – Phiên bản đầu tiên
+Đăng nhập/đăng ký, đặt dịch vụ, AI dự đoán lỗi và giá, tìm thợ gần nhất, quản lý đơn, thanh toán và đánh giá.
+Giai đoạn mở rộng
+Chat trực tuyến, bản đồ theo thời gian thực, AI đa phương thức, quản lý kho phụ tùng, bảo hành điện tử, chương trình thành viên và phân tích dữ liệu.
+2. Các nhóm chức năng và quyền người dùng
+3. Chức năng đăng nhập và đăng ký tài khoản
+Đây là chức năng bắt buộc và được ưu tiên triển khai đầu tiên.
+3.1. Quy tắc mở website
+Khi người dùng truy cập website:
+Nếu chưa đăng nhập, hệ thống hiển thị trang đăng nhập ngay lập tức.
+Nếu đã đăng nhập và phiên còn hợp lệ, hệ thống chuyển đến giao diện chính.
+Nếu phiên hết hạn, hệ thống yêu cầu đăng nhập lại.
+Nếu tài khoản bị khóa, hệ thống thông báo lý do phù hợp và hướng dẫn liên hệ hỗ trợ.
+Lưu ý: người dùng đã đăng nhập không nên bị yêu cầu đăng nhập lại mỗi lần mở website, trừ khi phiên hết hạn hoặc có yêu cầu bảo mật.
+3.2. Giao diện đăng nhập
+
+dribbble
+Giao diện đề xuất gồm hai phần:
+Bên trái: hình ảnh thợ sửa chữa chuyên nghiệp, thông điệp thương hiệu và lợi ích dịch vụ.
+Bên phải: biểu mẫu đăng nhập gọn gàng, rõ ràng, dễ sử dụng.
+Các trường và nút cần có:
+Email hoặc số điện thoại.
+Mật khẩu.
+Nút hiện/ẩn mật khẩu.
+Tùy chọn ghi nhớ đăng nhập.
+Nút Đăng nhập.
+Liên kết Quên mật khẩu?
+Liên kết Chưa có tài khoản? Đăng ký ngay.
+Khu vực hiển thị lỗi xác thực hoặc thông báo thành công.
+Có thể bổ sung đăng nhập Google hoặc phương thức xác thực khác ở giai đoạn sau.
+Yêu cầu xử lý
+Không cho gửi biểu mẫu nếu bỏ trống thông tin bắt buộc.
+Kiểm tra định dạng email hoặc số điện thoại.
+Thông báo lỗi dễ hiểu, không tiết lộ tài khoản nào tồn tại trong hệ thống.
+Giới hạn các lần đăng nhập sai liên tiếp và áp dụng cơ chế chống dò mật khẩu.
+Mật khẩu phải được băm bằng thuật toán thích hợp ở backend, không lưu dạng văn bản thuần.
+Phiên đăng nhập phải được quản lý an toàn.
+3.3. Giao diện đăng ký tài khoản
+
+framplates
+Các trường thông tin
+Danh sách câu hỏi bảo mật
+Hệ thống cung cấp danh sách để khách hàng lựa chọn:
+Bạn đã từng học ở trường nào?
+Tên thành phố nơi bạn sinh ra là gì?
+Tên người bạn thân thời thơ ấu của bạn là gì?
+Môn học yêu thích của bạn khi còn đi học là gì?
+Biệt danh thời thơ ấu của bạn là gì?
+Tên thú cưng đầu tiên của bạn là gì?
+Người dùng chọn hai câu hỏi khác nhau và tự nhập câu trả lời. Nên khuyến nghị khách hàng không chọn đáp án dễ bị người khác đoán hoặc tìm thấy trên mạng xã hội.
+Yêu cầu kỹ thuật quan trọng: câu trả lời bảo mật không được lưu dạng văn bản thuần. Backend phải chuẩn hóa câu trả lời nhất quán và lưu giá trị băm có salt riêng cho từng câu trả lời.
+3.4. Quy trình quên mật khẩu bằng câu hỏi bảo mật
+Bước 1 – Nhập thông tin tài khoản
+Khách hàng nhập email hoặc số điện thoại đã đăng ký.
+Bước 2 – Xác minh danh tính
+Hệ thống hiển thị hai câu hỏi đã đăng ký. Khách hàng nhập đúng cả hai câu trả lời.
+Bước 3 – Đặt mật khẩu mới
+Khi xác minh thành công, khách hàng nhập mật khẩu mới và xác nhận mật khẩu.
+Bước 4 – Hoàn tất
+Hệ thống cập nhật mật khẩu, thu hồi các phiên đăng nhập cũ và thông báo đổi mật khẩu thành công.
+Quy tắc bảo mật bắt buộc
+Mặc dù yêu cầu là chỉ cần trả lời đúng câu hỏi để đổi mật khẩu, cần lưu ý rằng câu hỏi bảo mật có thể bị đoán hoặc thu thập từ mạng xã hội.
+Để triển khai an toàn:
+Giới hạn số lần trả lời sai và thời gian thử lại.
+Không cho biết câu trả lời nào sai.
+Có thời gian chờ khi vượt quá số lần thử.
+Ghi nhận các lần khôi phục bất thường.
+Khuyến nghị bổ sung xác minh email hoặc OTP như một lớp bảo vệ tùy chọn.
+Nếu vẫn sử dụng câu hỏi bảo mật làm phương thức duy nhất, cần chấp nhận rằng mức bảo vệ sẽ thấp hơn xác minh bằng yếu tố độc lập.
+3.5. Tiêu chí nghiệm thu tài khoản
+Người chưa đăng nhập được chuyển đến trang đăng nhập.
+Người đăng ký mới có thể tạo tài khoản hợp lệ.
+Email hoặc số điện thoại bị trùng phải được xử lý đúng quy tắc.
+Hai câu hỏi bảo mật không được trùng nhau.
+Chỉ khi trả lời đúng tất cả câu hỏi bắt buộc mới được đổi mật khẩu.
+Câu trả lời sai không được tiết lộ đáp án đúng.
+Mật khẩu mới phải đáp ứng chính sách và được lưu an toàn.
+4. Thiết kế giao diện tổng thể
+Giao diện cần phù hợp với nền tảng sửa chữa, không phải website bán nội thất. Phong cách đề xuất là hiện đại, chuyên nghiệp, ưu tiên thao tác nhanh và minh bạch chi phí.
+4.1. Bộ nhận diện giao diện
+FixNow AI
+Xanh navy
+#102A43 – màu chủ đạo
+Đặt thợ ngay
+Xanh dương
+#2563EB – nút hành động
+Nội dung dễ đọc
+Trắng xám
+#F8FAFC – nền chính
+Đã xác nhận
+Xanh lá
+#16A34A – trạng thái thành công
+Quy tắc thiết kế:
+Font chữ rõ ràng như Inter hoặc Roboto.
+Góc bo tròn vừa phải, khoảng trắng hợp lý.
+Biểu tượng nhất quán, hình ảnh thợ sửa chữa chân thực.
+Hiển thị tốt trên máy tính, máy tính bảng và điện thoại.
+Có thông báo tải dữ liệu, trạng thái rỗng, lỗi và thành công.
+Có hỗ trợ bàn phím, độ tương phản và nhãn truy cập phù hợp.
+4.2. Bố cục trang chính
+
+blink
+Trang chính sau khi đăng nhập gồm:
+Header: logo, thanh tìm kiếm, vị trí hiện tại, thông báo, tin nhắn, giỏ dịch vụ nếu có, hồ sơ cá nhân.
+Sidebar: Trang chủ, Đặt dịch vụ, Dịch vụ của tôi, Theo dõi thợ, Lịch sử sửa chữa, Thanh toán, Đánh giá, Hỗ trợ.
+Slider banner: các chương trình ưu đãi, dịch vụ khẩn cấp, bảo dưỡng xe và sửa chữa tại nhà.
+Danh mục dịch vụ: sửa xe máy, sửa ô tô, điện nước, điện lạnh, thiết bị gia dụng và đồ dùng gia đình.
+Khung AI: nhập triệu chứng, tải ảnh/video và nhận dự đoán lỗi.
+Khu vực thợ nổi bật: hiển thị thợ được xác minh, chuyên môn, đánh giá và khoảng cách.
+Khu vực trạng thái: đơn đang xử lý, lịch hẹn sắp tới, lịch sử đơn và thông báo.
+4.3. Slider bar và thanh trạng thái
+Phân biệt hai thành phần để triển khai đúng:
+Slider banner là vùng hình ảnh có thể tự chuyển hoặc vuốt ngang. Mỗi banner có tiêu đề, mô tả và nút hành động, ví dụ “Sửa xe tại nhà”, “Đặt thợ điện nước” hoặc “Kiểm tra lỗi bằng AI”.
+Sidebar là thanh điều hướng cố định ở cạnh màn hình trên máy tính, có thể thu gọn; trên điện thoại chuyển thành menu trượt hoặc thanh điều hướng dưới.
+Thanh trạng thái đơn hàng hiển thị tiến trình rõ ràng:
+Đã đặt
+Đã nhận
+Đang đến
+Hoàn tất
+Ví dụ: đơn đã được thợ nhận và đang chờ di chuyển.
+Các trạng thái nghiệp vụ cần có:
+Chờ báo giá.
+Chờ khách hàng xác nhận.
+Đang tìm thợ.
+Thợ đã nhận việc.
+Thợ đang di chuyển.
+Thợ đã đến nơi.
+Đang sửa chữa.
+Chờ khách hàng nghiệm thu.
+Hoàn thành.
+Đã thanh toán.
+Đã hủy hoặc đang xử lý khiếu nại.
+5. Danh mục dịch vụ sửa chữa
+5.1. Dịch vụ sửa xe
+
+Sửa xe máy
+Không nổ máy, chết máy, hỏng ắc quy, lốp, phanh, thay dầu, bảo dưỡng định kỳ.
+
+Sửa ô tô
+Kiểm tra động cơ, ắc quy, hệ thống điện, điều hòa, lốp và bảo dưỡng tại chỗ.
+5.2. Dịch vụ sửa chữa tại nhà
+
+Điện dân dụng
+Ổ cắm, công tắc, hệ thống chiếu sáng, mất điện cục bộ.
+
+Nước và đường ống
+Rò rỉ nước, tắc đường ống, vòi nước, bồn rửa và thiết bị vệ sinh.
+
+Điện lạnh
+Điều hòa, tủ lạnh, máy giặt và thiết bị làm mát.
+
+Đồ gia dụng
+Thiết bị bếp, đồ điện gia dụng và các vật dụng được hỗ trợ trong danh mục.
+Mỗi dịch vụ cần có mô tả, phạm vi công việc, thời gian dự kiến, mức giá tham khảo, chính sách bảo hành, điều kiện thực hiện và danh sách thợ đủ chuyên môn.
+6. Chức năng AI dự đoán lỗi và báo giá cố định
+Đây là tính năng tạo nên sự khác biệt chính của FixNow AI.
+6.1. Mục tiêu
+AI giúp khách hàng:
+Xác định những nguyên nhân có khả năng gây ra sự cố.
+Biết mức độ khẩn cấp và những bước xử lý an toàn.
+Nhận báo giá trước khi đặt thợ.
+Biết rõ khoản nào đã nằm trong giá và khoản nào không được bao gồm.
+Quyết định có tiếp tục đặt dịch vụ hay không.
+AI chỉ đưa ra dự đoán hỗ trợ, không thay thế hoàn toàn việc kiểm tra thực tế của thợ.
+6.2. Quy trình chẩn đoán
+1. Thu thập triệu chứng
+Mô tả sự cố, loại xe/thiết bị, model, thời gian xuất hiện và dấu hiệu nhận biết.
+2. AI phân tích
+Kết hợp dữ liệu triệu chứng, lịch sử sửa chữa, bảng giá và kiến thức kỹ thuật được kiểm duyệt.
+3. Tạo báo giá
+Liệt kê lỗi dự đoán, công sửa chữa, phụ tùng, phí di chuyển và tổng giá cố định.
+4. Khách hàng quyết định
+Chọn Đồng ý để hệ thống bắt đầu tìm thợ; chọn Từ chối để kết thúc hoặc sửa thông tin.
+6.3. Giao diện AI chẩn đoán
+Các trường nhập liệu:
+Loại dịch vụ.
+Loại xe hoặc thiết bị.
+Hãng, model và năm sản xuất nếu biết.
+Mô tả triệu chứng.
+Thời điểm xảy ra lỗi.
+Ảnh hoặc video hiện trạng.
+Địa chỉ cần sửa chữa.
+Thời gian mong muốn.
+Mức độ khẩn cấp.
+Kết quả AI phải hiển thị:
+Lỗi có khả năng xảy ra.
+Mức độ tin cậy hoặc mức độ chắc chắn phù hợp với dữ liệu.
+Những nguyên nhân thay thế cần xem xét.
+Cảnh báo an toàn nếu có.
+Các hạng mục sửa chữa dự kiến.
+Giá từng hạng mục.
+Tổng giá cuối cùng khách hàng phải trả.
+Thời gian thực hiện dự kiến.
+Phạm vi bảo hành.
+Nút Đồng ý – Tìm thợ gần nhất và nút Chưa đồng ý.
+6.4. Nguyên tắc không phát sinh chi phí
+Đây là yêu cầu nghiệp vụ quan trọng nhất và phải được thực hiện bằng quy tắc backend, không chỉ bằng lời hứa trên giao diện.
+Nguyên tắc: khách hàng xác nhận báo giá thì tổng tiền phải trả được khóa theo báo giá đó.
+Ví dụ minh họa:
+Báo giá sửa xe máy
+Giá cố định
+Đây là số liệu minh họa, không phải giá thị trường đã xác minh.
+Công kiểm tra và sửa chữa
+120.000 ₫
+Phụ tùng đã xác định
+80.000 ₫
+Phí di chuyển
+20.000 ₫
+Tổng thanh toán
+220.000 ₫
+Cam kết giá đã duyệt
+Khách hàng không phải trả thêm phí công, phí di chuyển hoặc phụ phí ngoài báo giá đã chấp thuận. Nếu phát hiện hạng mục mới, thợ phải tạm dừng phần việc phát sinh và gửi báo giá bổ sung để khách hàng tự quyết định trước khi thực hiện.
+Quy tắc xử lý các trường hợp phát sinh
+Thợ không được tự ý thay phụ tùng hoặc thêm hạng mục tính phí.
+Nếu chẩn đoán ban đầu không chính xác, thợ phải báo cáo nguyên nhân thực tế.
+Hạng mục bổ sung phải có mô tả, giá, lý do và xác nhận rõ ràng của khách hàng.
+Nếu khách hàng không đồng ý, thợ chỉ được thực hiện phần việc đã được duyệt, nếu có thể thực hiện an toàn và đúng kỹ thuật.
+Nếu không thể hoàn thành theo báo giá ban đầu, hệ thống áp dụng chính sách hủy, hoàn tiền hoặc thanh toán phần công đã thỏa thuận từ trước.
+Không được tự động coi sự im lặng của khách hàng là đồng ý.
+Nếu không có xác nhận bổ sung, hệ thống không cho phép ghi nhận khoản phí phát sinh vào hóa đơn cuối cùng.
+Để đảm bảo tính khả thi, cần xác định rõ báo giá cố định bao gồm những gì. Những vật tư không thể xác định từ xa phải được xử lý theo chính sách minh bạch đã công bố, không được âm thầm chuyển thành phụ phí.
+6.5. Tiêu chí nghiệm thu AI
+AI trả về cấu trúc dữ liệu có danh sách lỗi dự đoán và các hạng mục báo giá.
+Tổng tiền được tính từ bảng giá do hệ thống kiểm soát, không cho mô hình AI tự tùy ý đặt giá.
+Nếu thiếu dữ liệu hoặc độ chắc chắn thấp, AI phải yêu cầu thêm thông tin hoặc đề xuất kiểm tra trực tiếp.
+Không cho phép đặt thợ nếu báo giá chưa hợp lệ hoặc khách hàng chưa đồng ý.
+Giá được duyệt phải lưu thành bản ghi bất biến gắn với đơn hàng.
+Mọi thay đổi báo giá phải tạo phiên bản mới và cần khách hàng xác nhận.
+AI phải hiển thị cảnh báo khi có nguy cơ mất an toàn, ví dụ nghi ngờ rò rỉ nhiên liệu, chập điện hoặc lỗi phanh.
+7. Kết nối thợ gần nhất và điều phối đơn hàng
+7.1. Mục tiêu
+Sau khi khách hàng bấm Đồng ý – Tìm thợ gần nhất, hệ thống tự động lựa chọn thợ phù hợp dựa trên khoảng cách, chuyên môn, trạng thái nhận việc, thời gian dự kiến đến và chất lượng dịch vụ.
+Không nên chỉ chọn thợ có tọa độ gần nhất. Thợ gần nhưng không có kỹ năng phù hợp hoặc đang bận không phải lựa chọn tốt nhất.
+7.2. Quy trình điều phối
+Khách hàng xác nhận báo giá
+Đơn hàng được khóa giá và chuyển sang trạng thái tìm thợ.
+Lọc thợ đủ điều kiện
+Đúng chuyên môn, đã xác minh, đang hoạt động, trong phạm vi phục vụ và không bị trùng lịch.
+Xếp hạng thợ phù hợp
+Tính khoảng cách, ETA, đánh giá, tỷ lệ nhận việc và năng lực kỹ thuật.
+Gửi yêu cầu nhận việc
+Thợ có thời gian phản hồi; nếu từ chối hoặc hết thời gian, hệ thống tìm thợ kế tiếp.
+Thợ nhận đơn và bắt đầu di chuyển
+Thuật toán chọn thợ
+Các tiêu chí chính:
+Đúng loại dịch vụ và chuyên môn.
+Khoảng cách hoặc thời gian di chuyển dự kiến.
+Trạng thái sẵn sàng nhận việc.
+Đánh giá và lịch sử hoàn thành.
+Tỷ lệ hủy đơn.
+Khả năng xử lý loại lỗi cụ thể.
+Mức độ phù hợp với thời gian khách hàng yêu cầu.
+Có thể dùng thuật toán xếp hạng có trọng số trong MVP. Sau khi đủ dữ liệu, hệ thống mới tối ưu mô hình điều phối bằng máy học.
+7.3. Trạng thái của thợ
+Ngoại tuyến.
+Trực tuyến, sẵn sàng nhận việc.
+Đang xem yêu cầu.
+Đã nhận đơn.
+Đang di chuyển.
+Đang thực hiện sửa chữa.
+Hoàn tất.
+Tạm nghỉ hoặc bị giới hạn nhận đơn.
+Thợ cần có giao diện riêng để quản lý lịch làm việc, thông tin kỹ năng, chứng chỉ, khu vực hoạt động, thu nhập và lịch sử đánh giá.
+7.4. Trường hợp không tìm được thợ
+Hệ thống phải:
+Thông báo rõ tình trạng cho khách hàng.
+Cho phép mở rộng bán kính tìm kiếm nếu khách hàng đồng ý.
+Đề xuất khung giờ khác hoặc đặt lịch trước.
+Cho phép hủy đơn và hoàn tiền theo chính sách nếu đã thu tiền.
+Không hiển thị rằng thợ đang đến khi chưa có thợ xác nhận nhận việc.
+8. Thanh toán và quản lý hóa đơn
+Website hỗ trợ ba phương thức bạn yêu cầu: tiền mặt, QR ngân hàng và thẻ Visa.
+8.1. Tiền mặt (COD hoặc thanh toán trực tiếp)
+Quy trình:
+Khách hàng chọn thanh toán tiền mặt.
+Hệ thống lưu phương thức thanh toán cho đơn hàng.
+Thợ thực hiện công việc.
+Khách hàng nghiệm thu.
+Khách hàng thanh toán đúng số tiền đã duyệt.
+Thợ hoặc hệ thống xác nhận đã thu tiền.
+Đơn hàng chuyển sang trạng thái đã thanh toán.
+Với dịch vụ tại nhà, đây là thanh toán trực tiếp sau khi hoàn thành, không nhất thiết là COD theo nghĩa giao hàng thương mại điện tử.
+8.2. Thanh toán bằng mã QR ngân hàng
+
+tuoitre
+Yêu cầu nghiệp vụ:
+Tài khoản ngân hàng nhận tiền phải thuộc cá nhân hoặc doanh nghiệp vận hành nền tảng theo mô hình thanh toán đã lựa chọn.
+Cấu hình ngân hàng, số tài khoản, tên chủ tài khoản và nội dung chuyển khoản.
+Tạo mã QR có số tiền và mã đơn hàng.
+Hiển thị số tiền, thông tin người nhận và thời hạn thanh toán.
+Xác nhận thanh toán bằng webhook hoặc cơ chế đối soát đáng tin cậy từ nhà cung cấp dịch vụ.
+Không chỉ dựa vào ảnh chụp màn hình chuyển khoản của khách hàng.
+Xử lý thanh toán trùng, sai số tiền, chuyển khoản thiếu hoặc quá hạn.
+Lưu ý triển khai: mã QR ngân hàng có thể được tạo theo chuẩn chuyển khoản phù hợp, nhưng để hệ thống tự động xác nhận tiền vào tài khoản, cần tích hợp API hoặc nhà cung cấp hỗ trợ thông báo biến động số dư. Tạo QR đơn thuần không đồng nghĩa với việc website có thể tự kiểm tra giao dịch.
+8.3. Thanh toán bằng Visa
+Tích hợp cổng thanh toán hỗ trợ thẻ quốc tế.
+Tạo giao dịch từ backend với mã đơn hàng.
+Hỗ trợ trạng thái đang xử lý, thành công, thất bại và hoàn tiền.
+Xác minh chữ ký webhook.
+Không lưu trực tiếp số thẻ đầy đủ hoặc mã CVV trên hệ thống.
+Sử dụng trang thanh toán được lưu trữ hoặc token hóa thẻ bởi nhà cung cấp phù hợp.
+Xử lý giao dịch lặp, hủy thanh toán và đối soát.
+8.4. Mô hình trạng thái thanh toán
+Hóa đơn phải lưu chi tiết công sửa chữa, phụ tùng, phí di chuyển, giảm giá, số tiền đã thanh toán và số tiền còn phải trả.
+9. Các chức năng cơ bản khác của website
+10. Chức năng nâng cao
+Những chức năng này có thể triển khai sau MVP để tránh làm dự án quá phức tạp ngay từ đầu.
+Bản đồ trực tiếp: theo dõi vị trí thợ khi được cấp quyền và khi thợ đang thực hiện đơn.
+Chat thời gian thực: nhắn tin, gửi ảnh, chia sẻ tình trạng sự cố.
+AI đa phương thức: phân tích văn bản, ảnh và video để hỗ trợ chẩn đoán.
+Lịch sử bảo dưỡng thông minh: gợi ý bảo dưỡng dựa trên các lần sửa chữa trước.
+Gợi ý phòng ngừa: cảnh báo các hạng mục cần kiểm tra trước khi xảy ra hỏng hóc.
+Quản lý phụ tùng: theo dõi mã hàng, tồn kho, giá nhập và giá bán.
+Chương trình khách hàng thân thiết: tích điểm, hạng thành viên và ưu đãi.
+Gói dành cho thợ: báo cáo doanh thu, lịch làm việc, khu vực nhận đơn.
+Dashboard quản trị: theo dõi số đơn, doanh thu, tỷ lệ hoàn thành, khiếu nại và hiệu quả điều phối.
+Chống gian lận: phát hiện đơn hàng bất thường, giao dịch lặp và đánh giá giả.
+Đa ngôn ngữ: hỗ trợ tiếng Việt trước, bổ sung ngôn ngữ khác khi cần.
+PWA: cho phép cài website lên màn hình điện thoại.
+Hóa đơn và báo cáo: xuất dữ liệu phục vụ quản lý, kế toán và đối soát.
+11. Yêu cầu chức năng tổng hợp
+Các yêu cầu dưới đây có thể dùng trực tiếp làm danh sách công việc cho đội phát triển.
+P0 là chức năng cốt lõi cần có trước khi ra mắt; P1 là chức năng mở rộng quan trọng; P2 là chức năng nâng cao.
+12. Yêu cầu phi chức năng
+12.1. Hiệu năng
+Trang đăng nhập và trang chính tải nhanh trên kết nối thông thường.
+API có thời gian phản hồi phù hợp với từng nghiệp vụ.
+Tác vụ AI có trạng thái chờ và xử lý lỗi khi quá thời gian.
+Tác vụ điều phối không gửi nhiều đơn trùng cho cùng một thợ do lỗi đồng thời.
+12.2. Bảo mật
+Phân quyền khách hàng, thợ và quản trị viên ở backend.
+Băm mật khẩu bằng Argon2id hoặc bcrypt với cấu hình phù hợp.
+Chống SQL injection, XSS, CSRF và lạm dụng API.
+Giới hạn tần suất đăng nhập, khôi phục mật khẩu và gửi yêu cầu nhận việc.
+Ghi nhật ký thay đổi báo giá, trạng thái đơn và giao dịch.
+Bảo vệ thông tin địa chỉ, số điện thoại và dữ liệu thanh toán.
+Chỉ chia sẻ vị trí khách hàng cho thợ liên quan đến đơn hàng theo chính sách công bố.
+12.3. Tính ổn định
+Xử lý webhook thanh toán lặp theo cơ chế idempotency.
+Sao lưu cơ sở dữ liệu và kiểm tra khả năng phục hồi.
+Có hệ thống ghi log, giám sát lỗi và cảnh báo.
+Lưu lịch sử thay đổi giá để phục vụ khiếu nại.
+Có quy trình phục hồi khi AI, bản đồ hoặc cổng thanh toán tạm thời không hoạt động.
+13. Kiến trúc kỹ thuật đề xuất
+Một kiến trúc phù hợp cho đồ án có thể sử dụng:
+Frontend – Giao diện người dùng
+React + TypeScript + Tailwind CSS
+Backend – REST API
+Node.js + Express hoặc NestJS
+PostgreSQL
+Tài khoản, đơn hàng, giá
+AI Service
+Chẩn đoán và dự toán
+Maps API
+Khoảng cách và ETA
+Payment Gateway
+QR và Visa
+Các thành phần có thể bổ sung khi cần:
+Redis cho cache và khóa điều phối.
+WebSocket hoặc Socket.IO cho chat và cập nhật trạng thái.
+Object Storage để lưu ảnh/video.
+Dịch vụ gửi email hoặc SMS.
+Hệ thống tác vụ nền để xử lý thông báo, đối soát và các tác vụ AI kéo dài.
+Đối với chức năng QR và Visa, phải lựa chọn nhà cung cấp có API phù hợp, hỗ trợ mô hình kinh doanh và quy định áp dụng tại Việt Nam. Không nên tự xây dựng cơ chế lưu dữ liệu thẻ hoặc giả lập xác nhận thanh toán.
+14. Cấu trúc dữ liệu chính
+Các bảng dữ liệu dự kiến:
+Nguyên tắc dữ liệu giá
+Mỗi báo giá cần có mã duy nhất, phiên bản, thời gian hết hạn, người tạo, tổng tiền, danh sách hạng mục, trạng thái chấp thuận và dấu thời gian khách hàng xác nhận.
+Đơn hàng phải tham chiếu đến báo giá đã duyệt. Không được lấy bảng giá hiện tại để ghi đè tổng tiền của một đơn đã được khách hàng xác nhận trước đó.
+15. Luồng nghiệp vụ tổng thể
+Mở website → Đăng nhập / Đăng ký
+Chọn loại sửa chữa → Nhập triệu chứng
+AI chẩn đoán sơ bộ → Tạo báo giá
+Khách hàng đồng ý báo giá
+Hệ thống tìm thợ phù hợp gần nhất
+Thợ xác nhận → Di chuyển → Sửa chữa
+Khách hàng nghiệm thu → Thanh toán
+Hóa đơn → Bảo hành → Đánh giá
+16. Các tiêu chí nghiệm thu quan trọng nhất
+Trước khi triển khai chính thức, các kịch bản sau phải hoạt động đúng:
+Người chưa đăng nhập không truy cập trực tiếp được các trang cần xác thực.
+Người dùng có thể đăng ký, đăng nhập và khôi phục mật khẩu theo chính sách.
+AI tạo được báo giá có cấu trúc, dựa trên dữ liệu giá được quản lý.
+Khách hàng phải chủ động xác nhận trước khi hệ thống tìm thợ.
+Hệ thống chỉ giao đơn cho thợ đủ chuyên môn và sẵn sàng nhận việc.
+Không có thợ xác nhận thì không được hiển thị trạng thái thợ đang đến.
+Báo giá đã duyệt được lưu cố định theo đơn hàng.
+Thợ không thể tự ý thêm phí vào hóa đơn.
+Mọi khoản phát sinh phải được khách hàng đồng ý trước khi thực hiện.
+QR và Visa chỉ được đánh dấu thanh toán thành công sau khi xác minh giao dịch.
+Thanh toán tiền mặt có cơ chế xác nhận thu tiền và xử lý tranh chấp.
+Khách hàng có thể xem lịch sử, hóa đơn, bảo hành và gửi khiếu nại.
+Kết luận phạm vi PRD giai đoạn đầu
+Bản PRD này đặt nền tảng cho một website kết nối sửa xe và sửa chữa tại nhà có tích hợp AI, với bốn ưu tiên cốt lõi:
+Tài khoản an toàn: đăng nhập, đăng ký và khôi phục mật khẩu.
+Giao diện đẹp: sidebar, slider banner, danh mục, thanh trạng thái và thiết kế responsive.
+AI báo giá minh bạch: chẩn đoán sơ bộ, dự toán và khóa giá sau khi khách hàng đồng ý.
+Điều phối và thanh toán: tìm thợ gần nhất phù hợp, theo dõi tiến độ, thanh toán tiền mặt, QR ngân hàng và Visa.
+Các chức năng mở rộng được thiết kế để bổ sung dần mà không phải xây dựng lại kiến trúc ban đầu. Đặc biệt, chính sách giá cố định cần được thực thi ở tầng backend và dữ liệu đơn hàng, để trở thành quy tắc có thể kiểm chứng chứ không chỉ là nội dung quảng cáo.
+
+Nhóm chức năng
+Khách hàng
+Thợ
+Quản trị viên
+Tài khoản và hồ sơ
+Có
+Có
+Quản lý
+Đặt và quản lý đơn
+Tạo, theo dõi, hủy theo chính sách
+Nhận, xử lý đơn
+Theo dõi toàn hệ thống
+AI chẩn đoán và báo giá
+Sử dụng
+Xem kết quả, kiểm tra chuyên môn
+Cấu hình và giám sát
+Điều phối thợ
+Nhận đề xuất thợ
+Bật/tắt trạng thái nhận việc
+Quản lý điều phối
+Thanh toán
+Thanh toán, xem hóa đơn
+Theo dõi thu nhập
+Đối soát giao dịch
+Đánh giá và khiếu nại
+Gửi đánh giá
+Phản hồi
+Xử lý tranh chấp
+Quản lý dịch vụ, giá
+Xem danh mục
+Khai báo năng lực
+Phê duyệt, quản lý
+Trường
+Bắt buộc
+Quy tắc
+Họ và tên
+Có
+Không được để trống
+Email
+Có
+Đúng định dạng, không trùng
+Số điện thoại
+Có
+Kiểm tra định dạng và xác minh khi cần
+Mật khẩu
+Có
+Đáp ứng chính sách mật khẩu
+Nhập lại mật khẩu
+Có
+Phải khớp
+Câu hỏi bảo mật 1
+Có
+Chọn từ danh sách được cung cấp
+Câu trả lời 1
+Có
+Chuẩn hóa và lưu an toàn
+Câu hỏi bảo mật 2
+Có
+Khác câu hỏi thứ nhất
+Câu trả lời 2
+Có
+Chuẩn hóa và lưu an toàn
+Đồng ý điều khoản
+Có
+Phải chấp thuận
+Trạng thái
+Ý nghĩa
+Chưa thanh toán
+Chưa có giao dịch hợp lệ
+Đang xử lý
+Đang chờ xác nhận
+Đã thanh toán
+Giao dịch được xác minh thành công
+Thanh toán thất bại
+Giao dịch bị từ chối hoặc lỗi
+Đang hoàn tiền
+Đã tạo yêu cầu hoàn tiền
+Đã hoàn tiền
+Tiền được hoàn thành công
+Chờ xác nhận tiền mặt
+Chưa xác nhận thu tiền trực tiếp
+Chức năng
+Yêu cầu
+Hồ sơ cá nhân
+Chỉnh sửa tên, số điện thoại, ảnh đại diện
+Sổ địa chỉ
+Lưu nhà, cơ quan và vị trí thường dùng
+Tìm kiếm dịch vụ
+Tìm theo tên, danh mục, triệu chứng
+Bộ lọc
+Giá, khoảng cách, đánh giá, thời gian
+Lịch đặt dịch vụ
+Đặt ngay hoặc đặt lịch trước
+Lịch sử sửa chữa
+Xem lại đơn và hóa đơn
+Thông báo
+Trạng thái đơn, lịch hẹn, thanh toán
+Đánh giá thợ
+Sao đánh giá, bình luận, hình ảnh
+Chat
+Trao đổi giữa khách hàng và thợ theo đơn
+Hỗ trợ
+Câu hỏi thường gặp, gửi yêu cầu hỗ trợ
+Yêu thích
+Lưu thợ hoặc dịch vụ yêu thích
+Mã giảm giá
+Nhập mã khuyến mãi hợp lệ
+Bảo hành
+Lưu thời hạn và điều kiện bảo hành
+Hủy đơn
+Theo quy tắc từng trạng thái
+Khiếu nại
+Gửi nội dung và bằng chứng liên quan
+Mã
+Yêu cầu
+Mức ưu tiên
+FR-001
+Chuyển người chưa đăng nhập đến trang đăng nhập
+P0
+FR-002
+Đăng ký và xác thực thông tin tài khoản
+P0
+FR-003
+Câu hỏi bảo mật và khôi phục mật khẩu
+P0
+FR-004
+Quản lý hồ sơ và địa chỉ
+P0
+FR-005
+Danh mục và tìm kiếm dịch vụ
+P0
+FR-006
+AI dự đoán lỗi và tạo báo giá
+P0
+FR-007
+Lưu báo giá đã duyệt, chống tự ý phát sinh phí
+P0
+FR-008
+Tìm thợ phù hợp gần nhất
+P0
+FR-009
+Quản lý vòng đời đơn hàng
+P0
+FR-010
+Thanh toán tiền mặt
+P0
+FR-011
+Thanh toán QR và đối soát
+P0
+FR-012
+Thanh toán Visa qua cổng thanh toán
+P0
+FR-013
+Hóa đơn, lịch sử giao dịch
+P0
+FR-014
+Đánh giá, khiếu nại và hỗ trợ
+P1
+FR-015
+Chat khách hàng – thợ
+P1
+FR-016
+Theo dõi thợ trên bản đồ
+P1
+FR-017
+Bảo hành điện tử
+P1
+FR-018
+Quản lý phụ tùng và kho
+P2
+FR-019
+Gợi ý bảo dưỡng bằng AI
+P2
+FR-020
+Phân tích kinh doanh nâng cao
+P2
+Bảng
+Nội dung
+users
+Thông tin tài khoản, vai trò, trạng thái
+user_security_questions
+Câu hỏi bảo mật và giá trị băm câu trả lời
+customer_addresses
+Địa chỉ và tọa độ khách hàng
+technicians
+Hồ sơ, chuyên môn và trạng thái thợ
+technician_services
+Dịch vụ thợ được phép nhận
+service_categories
+Danh mục dịch vụ
+service_price_items
+Bảng giá và quy tắc tính giá
+repair_requests
+Yêu cầu chẩn đoán và đặt dịch vụ
+ai_diagnoses
+Kết quả phân tích AI
+quotes
+Báo giá và phiên bản báo giá
+quote_items
+Các hạng mục trong báo giá
+orders
+Đơn hàng và trạng thái xử lý
+order_status_history
+Lịch sử trạng thái
+technician_assignments
+Quá trình điều phối thợ
+payments
+Giao dịch thanh toán
+payment_events
+Sự kiện thanh toán và đối soát
+invoices
+Hóa đơn
+reviews
+Đánh giá
+warranties
+Thông tin bảo hành
+conversations
+Hội thoại
+messages
+Tin nhắn
+notifications
+Thông báo
+support_tickets
+Khiếu nại và yêu cầu hỗ trợ
+audit_logs
+Nhật ký hoạt động quan trọng
